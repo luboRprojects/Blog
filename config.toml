@@ -6,7 +6,7 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
+baseurl = "https://lubor.netlify.com/"
 
 # Title of your site
 title = "Academic"
@@ -67,7 +67,7 @@ enableGitInfo = false
   email = "test@example.org"
   address = "Building 1 Room 1, Stanford University, California, 90210, USA"
   office_hours = """
-  Monday 10:00 to 13:00\\
+  Monday 11:00 to 24:00\\
   Wednesday 09:00 to 10:00\\
   Otherwise email to book an appointment
   """
