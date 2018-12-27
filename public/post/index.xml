@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>How about rMarkdown?</title>
+      <link>/post/how-about-rmarkdown/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-about-rmarkdown/</guid>
+      <description>Use the long name of the extension to do the trick:
+hist(rnorm(1000))  </description>
+    </item>
+    
+    <item>
       <title>Academic: the website designer for Hugo</title>
       <link>/post/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
