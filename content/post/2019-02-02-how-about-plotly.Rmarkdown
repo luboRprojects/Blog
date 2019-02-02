@@ -12,10 +12,12 @@ image:
 
 Let's try some plotly
 
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
+library(widgetframe)
 library(dplyr)
 library(ggplot2)
 library(plotly)
+library(webshot)
 
 p1 <- mtcars %>%
  mutate(Cylinders = as.factor(cyl)) %>%
@@ -24,7 +26,8 @@ p1 <- mtcars %>%
   theme_bw()
 ```
 
-```{r}
-ggplotly(p1)
+```{r, plotly=TRUE}
+p2 <- ggplotly(p1)
+frameWidget(p2)
 ```
 
