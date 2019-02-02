@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "42015E01",
-    "lastKnownWriteTime" : 1549144862,
-    "last_content_update" : 1549144862425,
+    "lastKnownWriteTime" : 1549145227,
+    "last_content_update" : 1549145227764,
     "path" : "C:/rProjects/Blog/content/post/2019-02-02-how-about-plotly.Rmarkdown",
     "project_path" : "content/post/2019-02-02-how-about-plotly.Rmarkdown",
     "properties" : {
-        "cursorPosition" : "25,12",
-        "scrollLine" : "0"
+        "cursorPosition" : "15,14",
+        "scrollLine" : "1"
     },
     "relative_order" : 2,
     "source_on_save" : false,

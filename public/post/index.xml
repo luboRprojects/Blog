@@ -19,7 +19,23 @@
       
       <guid>/post/how-about-plotly/</guid>
       <description>Let&amp;rsquo;s try some plotly
-library(dplyr)  ## ## Attaching package: &#39;dplyr&#39;  ## The following objects are masked from &#39;package:stats&#39;: ## ## filter, lag  ## The following objects are masked from &#39;package:base&#39;: ## ## intersect, setdiff, setequal, union  library(ggplot2) library(plotly)  ## ## Attaching package: &#39;plotly&#39;  ## The following object is masked from &#39;package:ggplot2&#39;: ## ## last_plot  ## The following object is masked from &#39;package:stats&#39;: ## ## filter  ## The following object is masked from &#39;package:graphics&#39;: ## ## layout  p1 &amp;lt;- mtcars %&amp;gt;% mutate(Cylinders = as.</description>
+library(dplyr) library(ggplot2) library(plotly) p1 &amp;lt;- mtcars %&amp;gt;% mutate(Cylinders = as.factor(cyl)) %&amp;gt;% ggplot(., aes(x=hp, y=mpg, col=Cylinders) ) + geom_point(size=4, alpha=0.7) + theme_bw()  ggplotly(p1)   {&amp;ldquo;x&amp;rdquo;:{&amp;ldquo;data&amp;rdquo;:[{&amp;ldquo;x&amp;rdquo;:[93,62,95,66,52,65,97,66,91,113,109],&amp;ldquo;y&amp;rdquo;:[22.8,24.4,22.8,32.4,30.4,33.9,21.5,27.3,26,30.4,21.4],&amp;ldquo;text&amp;rdquo;:[&amp;ldquo;hp: 93
+mpg: 22.8
+Cylinders: 4&amp;rdquo;,&amp;ldquo;hp: 62
+mpg: 24.4
+Cylinders: 4&amp;rdquo;,&amp;ldquo;hp: 95
+mpg: 22.8
+Cylinders: 4&amp;rdquo;,&amp;ldquo;hp: 66
+mpg: 32.4
+Cylinders: 4&amp;rdquo;,&amp;ldquo;hp: 52
+mpg: 30.4
+Cylinders: 4&amp;rdquo;,&amp;ldquo;hp: 65
+mpg: 33.9
+Cylinders: 4&amp;rdquo;,&amp;ldquo;hp: 97
+mpg: 21.5
+Cylinders: 4&amp;rdquo;,&amp;ldquo;hp: 66
+mpg: 27.3
+Cylinders: 4&amp;rdquo;,&amp;ldquo;hp: 91</description>
     </item>
     
     <item>
