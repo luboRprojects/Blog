@@ -1,0 +1,32 @@
+---
+title: Plotly2
+author: ''
+date: '2019-02-02'
+slug: plotly2
+categories: []
+tags: []
+image:
+  caption: ''
+  focal_point: ''
+---
+
+Let's try some plotly
+
+```{r, message=FALSE, warning=FALSE}
+library(widgetframe)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(webshot)
+
+p1 <- mtcars %>%
+ mutate(Cylinders = as.factor(cyl)) %>%
+ ggplot(., aes(x=hp, y=mpg, col=Cylinders) ) + 
+  geom_point(size=4, alpha=0.7) + 
+  theme_bw()
+```
+
+```{r}
+p2 <- ggplotly(p1)
+frameWidget(p2)
+```

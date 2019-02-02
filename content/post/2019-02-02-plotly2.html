@@ -1,0 +1,33 @@
+---
+title: Plotly2
+author: ''
+date: '2019-02-02'
+slug: plotly2
+categories: []
+tags: []
+image:
+  caption: ''
+  focal_point: ''
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+
+<p>Let’s try some plotly</p>
+<pre class="r"><code>library(widgetframe)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(webshot)
+
+p1 &lt;- mtcars %&gt;%
+ mutate(Cylinders = as.factor(cyl)) %&gt;%
+ ggplot(., aes(x=hp, y=mpg, col=Cylinders) ) + 
+  geom_point(size=4, alpha=0.7) + 
+  theme_bw()</code></pre>
+<pre class="r"><code>p2 &lt;- ggplotly(p1)
+frameWidget(p2)</code></pre>
+<div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/2019-02-02-plotly2_files/figure-html//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
