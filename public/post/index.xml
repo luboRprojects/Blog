@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>How About Plotly?</title>
+      <link>/post/how-about-plotly/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-about-plotly/</guid>
+      <description>Let&amp;rsquo;s try some plotly
+library(dplyr)  ## ## Attaching package: &#39;dplyr&#39;  ## The following objects are masked from &#39;package:stats&#39;: ## ## filter, lag  ## The following objects are masked from &#39;package:base&#39;: ## ## intersect, setdiff, setequal, union  library(ggplot2) library(plotly)  ## ## Attaching package: &#39;plotly&#39;  ## The following object is masked from &#39;package:ggplot2&#39;: ## ## last_plot  ## The following object is masked from &#39;package:stats&#39;: ## ## filter  ## The following object is masked from &#39;package:graphics&#39;: ## ## layout  p1 &amp;lt;- mtcars %&amp;gt;% mutate(Cylinders = as.</description>
+    </item>
+    
+    <item>
       <title>How about rMarkdown?</title>
       <link>/post/how-about-rmarkdown/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
