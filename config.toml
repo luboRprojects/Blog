@@ -258,7 +258,7 @@ enableGitInfo = false
   #
   #   cv, google-scholar, arxiv, orcid, researchgate, mendeley
   #
-     Full list: https://jpswalsh.github.io/academicons/
+  #   Full list: https://jpswalsh.github.io/academicons/
 
   [[params.social]]
     icon = "envelope"
