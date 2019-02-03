@@ -281,7 +281,7 @@ enableGitInfo = false
     link = "https://github.com/luboRprojects"
 	
 	[[params.social]]
-    icon = "stackoverflow"
+    icon = "stack-overflow"
     icon_pack = "fab"
     link = "https://stackoverflow.com/users/7357438/lstat"
 
