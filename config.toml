@@ -9,7 +9,7 @@
 baseurl = "https://lubor.netlify.com/"
 
 # Title of your site
-title = "LH - Personal Webpage"
+title = ""
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -64,16 +64,15 @@ enableGitInfo = false
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
 
   # Details for the Contact Widget
-  email = "test@example.org"
+  email = "homolka@utb.cz"
   address = "Building 1 Room 1, Stanford University, California, 90210, USA"
   office_hours = """
-  Monday 11:00 to 24:00\\
   Wednesday 09:00 to 10:00\\
   Otherwise email to book an appointment
   """
-  phone = "888 888 88 88"
-  skype = "echo123"
-  telegram = ""
+  #phone = "888 888 88 88"
+  #skype = "echo123"
+  #telegram = ""
   keybase = ""  # Your keybase.io username.
 
   # Enter an optional link for booking appointments (e.g. calendly.com).
@@ -279,7 +278,7 @@ enableGitInfo = false
   [[params.social]]
     icon = "github"
     icon_pack = "fab"
-    link = "https://github.com/gcushen"
+    link = "https://github.com/luboRprojects"
 
   # Link to a PDF of your resume/CV from the About widget.
   # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
