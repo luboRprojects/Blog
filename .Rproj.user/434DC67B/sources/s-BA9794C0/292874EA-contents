@@ -54,18 +54,18 @@ enableGitInfo = false
 
   # Your details.
   name = "Lubor Homolka"
-  role = "Lecturer at Tomas Baťa University"
+  role = "Lecturer"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Stanford University", url = "" } ]
+  organizations = [ { name = "Tomas Baťa University", url = "https://fame.utb.cz/en/" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
 
   # Details for the Contact Widget
   email = "homolka@utb.cz"
-  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  address = "Faculty of Management and Economics, Building U2, Mostní 5139, 760 01 Zlín"
   office_hours = """
   Wednesday 09:00 to 10:00\\
   Otherwise email to book an appointment
@@ -145,7 +145,7 @@ enableGitInfo = false
 
   # Enable global LaTeX math rendering?
   #   If false, you can enable it locally on a per page basis.
-  math = false
+  math = true
 
   # Highlight.js options
   #   highlight
