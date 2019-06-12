@@ -1,8 +1,8 @@
 ---
-title: Granger Causality and Multiple Time Series
+title: Mutliple Time Series Granger Causality
 author: ''
 date: '2019-06-12'
-slug: granger-causality-and-multiple-time-series
+slug: mutliple-time-series-granger-causality
 categories: []
 tags: []
 image:
@@ -33,13 +33,9 @@ edges <- create_edge_df(from=match(df$col1, uniquenodes), to=match(df$col2, uniq
 
 g <- create_graph(nodes_df=nodes, edges_df=edges)
 render_graph(g)
-
-
-export_graph(g,
-file_name = "pic.png",
-file_type = "png")
-
+#export_graph(g,
+#file_name = "pic.png",
+#file_type = "png")
 
 #frameWidget(g, height = 350, width = '95%')
 ```
-

@@ -1,21 +1,21 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1549147899710.000,
+    "created" : 1560348036028.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "F87482EE",
+    "id" : "1A31426",
     "lastKnownWriteTime" : 1549147966,
-    "last_content_update" : 1549147966358,
+    "last_content_update" : 1549147966,
     "path" : "C:/rProjects/Blog/content/post/2019-02-02-plotly2.Rmd",
     "project_path" : "content/post/2019-02-02-plotly2.Rmd",
     "properties" : {
         "cursorPosition" : "19,12",
         "scrollLine" : "0"
     },
-    "relative_order" : 3,
+    "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"
