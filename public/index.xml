@@ -11,6 +11,55 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Granger Causality and Multiple Time Series</title>
+      <link>/post/granger-causality-and-multiple-time-series/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/granger-causality-and-multiple-time-series/</guid>
+      <description>
+
+&lt;p&gt;We have recently submitted a paper about the short-term car registration forecasting. Forecasting models were based on several underlying variables which were analysed by a standard Vector Autoregressive Model. As the main purpose of the paper was not to present a black-box model with a good predictive power, we needed to analyse an importants of the car registration determinants.&lt;/p&gt;
+
+&lt;p&gt;A traditional approach to identify &lt;em&gt;&amp;ldquo;cause and effects&amp;rdquo;&lt;/em&gt; in the context of time series analysis is to perform the Granger Causality test. Surprisingly, a treatment of the multivariate is not discussed much. Typically, two variables settings is presented with the caveat that solution works even for a more variables. This is only a partially true.&lt;/p&gt;
+
+&lt;p&gt;In the following text we will go through the simple 3 time-series example with various settings of interconnections.&lt;/p&gt;
+
+&lt;h2 id=&#34;three-variables-one-driver&#34;&gt;Three Variables, One driver&lt;/h2&gt;
+
+&lt;p&gt;This example shows the analysis of the tree time series where the first time series &lt;em&gt;ts1&lt;/em&gt; is a confounding time series.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(DiagrammeR)
+
+DiagrammeR::grViz(&amp;quot;digraph boxes_and_circles{
+
+graph[layout = dot, rankdir = LR]
+
+TS1; TS2; TS3
+
+TS1 -&amp;gt; TS2 [label = &#39;AR1 + alpha TS1&#39;]
+TS1 -&amp;gt; TS3 [label = &#39;AR1 + beta TS2&#39;]
+TS2 -&amp;gt; TS3 [label = &#39;No Relation&#39;, color= &#39;red&#39;]
+}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning in normalizePath(path.expand(path), winslash, mustWork):
+## path[1]=&amp;quot;webshot5ee41c2e7449.png&amp;quot;: Systém nemuže nalézt uvedený soubor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning in file(con, &amp;quot;rb&amp;quot;): cannot open file &#39;C:
+## \Users\Lubor\AppData\Local\Temp\Rtmpqerj4r\file5ee418d87efa\webshot5ee41c2e7449.png&#39;:
+## No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Error in file(con, &amp;quot;rb&amp;quot;): cannot open the connection
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How About Plotly?</title>
       <link>/post/how-about-plotly/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
