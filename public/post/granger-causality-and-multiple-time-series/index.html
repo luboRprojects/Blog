@@ -364,31 +364,27 @@ A traditional approach to identify &ldquo;cause and effects&rdquo; in the contex
 
 <pre><code class="language-r">library(DiagrammeR)
 
-DiagrammeR::grViz(&quot;digraph boxes_and_circles{
+df &lt;- data.frame(col1 = c( &quot;Cat&quot;, &quot;Dog&quot;, &quot;Bird&quot;),
+                 col2 = c( &quot;Feline&quot;, &quot;Canis&quot;, &quot;Avis&quot;), 
+                 stringsAsFactors=FALSE)
+uniquenodes &lt;- unique(c(df$col1, df$col2))
 
-graph[layout = dot, rankdir = LR]
+nodes &lt;- create_node_df(n=length(uniquenodes), nodes = seq(uniquenodes), type=&quot;number&quot;, label=uniquenodes)
+edges &lt;- create_edge_df(from=match(df$col1, uniquenodes), to=match(df$col2, uniquenodes), rel=&quot;related&quot;)
 
-TS1; TS2; TS3
-
-TS1 -&gt; TS2 [label = 'AR1 + alpha TS1']
-TS1 -&gt; TS3 [label = 'AR1 + beta TS2']
-TS2 -&gt; TS3 [label = 'No Relation', color= 'red']
-}&quot;)
+g &lt;- create_graph(nodes_df=nodes, edges_df=edges)
+render_graph(g)
 </code></pre>
 
-<pre><code>## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
-</code></pre>
+<p><!--html_preserve--><div id="htmlwidget-210ccf5db27782c5c4c9" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-210ccf5db27782c5c4c9">{&ldquo;x&rdquo;:{&ldquo;diagram&rdquo;:&ldquo;digraph {\n\ngraph [layout = \&ldquo;neato\&ldquo;,\n       outputorder = \&ldquo;edgesfirst\&ldquo;,\n       bgcolor = \&ldquo;white\&ldquo;]\n\nnode [fontname = \&ldquo;Helvetica\&ldquo;,\n      fontsize = \&ldquo;10\&ldquo;,\n      shape = \&ldquo;circle\&ldquo;,\n      fixedsize = \&ldquo;true\&ldquo;,\n      width = \&ldquo;0.5\&ldquo;,\n      style = \&ldquo;filled\&ldquo;,\n      fillcolor = \&ldquo;aliceblue\&ldquo;,\n      color = \&ldquo;gray70\&ldquo;,\n      fontcolor = \&ldquo;gray50\&ldquo;]\n\nedge [fontname = \&ldquo;Helvetica\&ldquo;,\n     fontsize = \&ldquo;8\&ldquo;,\n     len = \&ldquo;1.5\&ldquo;,\n     color = \&ldquo;gray80\&ldquo;,\n     arrowsize = \&ldquo;0.5\&ldquo;]\n\n  \&ldquo;1\&rdquo; [label = \&ldquo;Cat\&ldquo;, fillcolor = \&ldquo;#F0F8FF\&ldquo;, fontcolor = \&ldquo;#000000\&ldquo;] \n  \&ldquo;2\&rdquo; [label = \&ldquo;Dog\&ldquo;, fillcolor = \&ldquo;#F0F8FF\&ldquo;, fontcolor = \&ldquo;#000000\&ldquo;] \n  \&ldquo;3\&rdquo; [label = \&ldquo;Bird\&ldquo;, fillcolor = \&ldquo;#F0F8FF\&ldquo;, fontcolor = \&ldquo;#000000\&ldquo;] \n  \&ldquo;4\&rdquo; [label = \&ldquo;Feline\&ldquo;, fillcolor = \&ldquo;#F0F8FF\&ldquo;, fontcolor = \&ldquo;#000000\&ldquo;] \n  \&ldquo;5\&rdquo; [label = \&ldquo;Canis\&ldquo;, fillcolor = \&ldquo;#F0F8FF\&ldquo;, fontcolor = \&ldquo;#000000\&ldquo;] \n  \&ldquo;6\&rdquo; [label = \&ldquo;Avis\&ldquo;, fillcolor = \&ldquo;#F0F8FF\&ldquo;, fontcolor = \&ldquo;#000000\&ldquo;] \n  \&ldquo;1\&ldquo;-&gt;\&ldquo;4\&rdquo; \n  \&ldquo;2\&ldquo;-&gt;\&ldquo;5\&rdquo; \n  \&ldquo;3\&ldquo;-&gt;\&ldquo;6\&rdquo; \n}&ldquo;,&ldquo;config&rdquo;:{&ldquo;engine&rdquo;:&ldquo;dot&rdquo;,&ldquo;options&rdquo;:null}},&ldquo;evals&rdquo;:[],&ldquo;jsHooks&rdquo;:[]}</script><!--/html_preserve--></p>
 
-<pre><code>## Warning in normalizePath(path.expand(path), winslash, mustWork):
-## path[1]=&quot;webshot5ee41c2e7449.png&quot;: Systém nemuže nalézt uvedený soubor
-</code></pre>
+<pre><code class="language-r">export_graph(g,
+file_name = &quot;pic.png&quot;,
+file_type = &quot;png&quot;)
 
-<pre><code>## Warning in file(con, &quot;rb&quot;): cannot open file 'C:
-## \Users\Lubor\AppData\Local\Temp\Rtmpqerj4r\file5ee418d87efa\webshot5ee41c2e7449.png':
-## No such file or directory
-</code></pre>
 
-<pre><code>## Error in file(con, &quot;rb&quot;): cannot open the connection
+#frameWidget(g, height = 350, width = '95%')
 </code></pre>
 
     </div>

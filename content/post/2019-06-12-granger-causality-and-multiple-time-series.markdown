@@ -24,34 +24,27 @@ This example shows the analysis of the tree time series where the first time ser
 ```r
 library(DiagrammeR)
 
-DiagrammeR::grViz("digraph boxes_and_circles{
+df <- data.frame(col1 = c( "Cat", "Dog", "Bird"),
+                 col2 = c( "Feline", "Canis", "Avis"), 
+                 stringsAsFactors=FALSE)
+uniquenodes <- unique(c(df$col1, df$col2))
 
-graph[layout = dot, rankdir = LR]
+nodes <- create_node_df(n=length(uniquenodes), nodes = seq(uniquenodes), type="number", label=uniquenodes)
+edges <- create_edge_df(from=match(df$col1, uniquenodes), to=match(df$col2, uniquenodes), rel="related")
 
-TS1; TS2; TS3
-
-TS1 -> TS2 [label = 'AR1 + alpha TS1']
-TS1 -> TS3 [label = 'AR1 + beta TS2']
-TS2 -> TS3 [label = 'No Relation', color= 'red']
-}")
-```
-
-```
-## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
+g <- create_graph(nodes_df=nodes, edges_df=edges)
+render_graph(g)
 ```
 
-```
-## Warning in normalizePath(path.expand(path), winslash, mustWork):
-## path[1]="webshot5ee41c2e7449.png": Systém nemuže nalézt uvedený soubor
-```
+<!--html_preserve--><div id="htmlwidget-210ccf5db27782c5c4c9" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-210ccf5db27782c5c4c9">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Cat\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Dog\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [label = \"Bird\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"4\" [label = \"Feline\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"5\" [label = \"Canis\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"6\" [label = \"Avis\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"1\"->\"4\" \n  \"2\"->\"5\" \n  \"3\"->\"6\" \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
-```
-## Warning in file(con, "rb"): cannot open file 'C:
-## \Users\Lubor\AppData\Local\Temp\Rtmpqerj4r\file5ee418d87efa\webshot5ee41c2e7449.png':
-## No such file or directory
-```
+```r
+export_graph(g,
+file_name = "pic.png",
+file_type = "png")
 
-```
-## Error in file(con, "rb"): cannot open the connection
+
+#frameWidget(g, height = 350, width = '95%')
 ```
 

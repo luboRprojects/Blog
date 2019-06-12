@@ -29,32 +29,23 @@
 &lt;p&gt;This example shows the analysis of the tree time series where the first time series &lt;em&gt;ts1&lt;/em&gt; is a confounding time series.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(DiagrammeR)
+#library(widgetframe)
 
-DiagrammeR::grViz(&amp;quot;digraph boxes_and_circles{
 
-graph[layout = dot, rankdir = LR]
+df &amp;lt;- data.frame(col1 = c( &amp;quot;Cat&amp;quot;, &amp;quot;Dog&amp;quot;, &amp;quot;Bird&amp;quot;),
+                 col2 = c( &amp;quot;Feline&amp;quot;, &amp;quot;Canis&amp;quot;, &amp;quot;Avis&amp;quot;), 
+                 stringsAsFactors=FALSE)
 
-TS1; TS2; TS3
 
-TS1 -&amp;gt; TS2 [label = &#39;AR1 + alpha TS1&#39;]
-TS1 -&amp;gt; TS3 [label = &#39;AR1 + beta TS2&#39;]
-TS2 -&amp;gt; TS3 [label = &#39;No Relation&#39;, color= &#39;red&#39;]
-}&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
+uniquenodes &amp;lt;- unique(c(df$col1, df$col2))
 
-&lt;pre&gt;&lt;code&gt;## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
-&lt;/code&gt;&lt;/pre&gt;
+nodes &amp;lt;- create_node_df(n=length(uniquenodes), nodes = seq(uniquenodes), type=&amp;quot;number&amp;quot;, label=uniquenodes)
+edges &amp;lt;- create_edge_df(from=match(df$col1, uniquenodes), to=match(df$col2, uniquenodes), rel=&amp;quot;related&amp;quot;)
 
-&lt;pre&gt;&lt;code&gt;## Warning in normalizePath(path.expand(path), winslash, mustWork):
-## path[1]=&amp;quot;webshot5ee41c2e7449.png&amp;quot;: Systém nemuže nalézt uvedený soubor
-&lt;/code&gt;&lt;/pre&gt;
+g &amp;lt;- create_graph(nodes_df=nodes, edges_df=edges)
+render_graph(g, output=&amp;quot;SVG&amp;quot;)
 
-&lt;pre&gt;&lt;code&gt;## Warning in file(con, &amp;quot;rb&amp;quot;): cannot open file &#39;C:
-## \Users\Lubor\AppData\Local\Temp\Rtmpqerj4r\file5ee418d87efa\webshot5ee41c2e7449.png&#39;:
-## No such file or directory
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Error in file(con, &amp;quot;rb&amp;quot;): cannot open the connection
+#frameWidget(g, height = 350, width = &#39;95%&#39;)
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
