@@ -36,9 +36,4 @@ g &lt;- create_graph(nodes_df=nodes, edges_df=edges)
 render_graph(g)</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Cat\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Dog\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [label = \"Bird\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"4\" [label = \"Feline\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"5\" [label = \"Canis\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"6\" [label = \"Avis\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"1\"->\"4\" \n  \"2\"->\"5\" \n  \"3\"->\"6\" \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>#export_graph(g,
-#file_name = &quot;pic.png&quot;,
-#file_type = &quot;png&quot;)
-
-#frameWidget(g, height = 350, width = &#39;95%&#39;)</code></pre>
 </div>

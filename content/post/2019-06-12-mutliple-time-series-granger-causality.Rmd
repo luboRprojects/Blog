@@ -33,9 +33,5 @@ edges <- create_edge_df(from=match(df$col1, uniquenodes), to=match(df$col2, uniq
 
 g <- create_graph(nodes_df=nodes, edges_df=edges)
 render_graph(g)
-#export_graph(g,
-#file_name = "pic.png",
-#file_type = "png")
 
-#frameWidget(g, height = 350, width = '95%')
 ```
