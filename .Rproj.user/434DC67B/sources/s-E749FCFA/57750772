@@ -8,12 +8,12 @@
     "hash" : "0",
     "id" : "57750772",
     "lastKnownWriteTime" : 1560348140,
-    "last_content_update" : 1560348140232,
+    "last_content_update" : 1560407877994,
     "path" : "C:/rProjects/Blog/content/post/2019-06-12-mutliple-time-series-granger-causality.Rmd",
     "project_path" : "content/post/2019-06-12-mutliple-time-series-granger-causality.Rmd",
     "properties" : {
-        "cursorPosition" : "34,15",
-        "scrollLine" : "13"
+        "cursorPosition" : "20,84",
+        "scrollLine" : "0"
     },
     "relative_order" : 5,
     "source_on_save" : false,

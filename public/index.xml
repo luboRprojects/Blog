@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>/</link>
+    <link>https://lubor.netlify.com/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,15 +12,15 @@
     
     <item>
       <title>Mutliple Time Series Granger Causality</title>
-      <link>/post/mutliple-time-series-granger-causality/</link>
+      <link>https://lubor.netlify.com/post/mutliple-time-series-granger-causality/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/mutliple-time-series-granger-causality/</guid>
+      <guid>https://lubor.netlify.com/post/mutliple-time-series-granger-causality/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/viz/viz.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/DiagrammeR-styles/styles.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/grViz-binding/grViz.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://lubor.netlify.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://lubor.netlify.com/rmarkdown-libs/viz/viz.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://lubor.netlify.com/rmarkdown-libs/DiagrammeR-styles/styles.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://lubor.netlify.com/rmarkdown-libs/grViz-binding/grViz.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;We have recently submitted a paper about the short-term car registration forecasting. Forecasting models were based on several underlying variables which were analysed by a standard Vector Autoregressive Model. As the main purpose of the paper was not to present a black-box model with a good predictive power, we needed to analyse an importants of the car registration determinants.&lt;/p&gt;
@@ -54,23 +54,23 @@ render_graph(g)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>How About Plotly?</title>
-      <link>/post/how-about-plotly/</link>
+      <link>https://lubor.netlify.com/post/how-about-plotly/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-about-plotly/</guid>
+      <guid>https://lubor.netlify.com/post/how-about-plotly/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Plotly2</title>
-      <link>/post/plotly2/</link>
+      <link>https://lubor.netlify.com/post/plotly2/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/plotly2/</guid>
+      <guid>https://lubor.netlify.com/post/plotly2/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://lubor.netlify.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://lubor.netlify.com/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://lubor.netlify.com/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Let’s try some plotly&lt;/p&gt;
@@ -94,25 +94,25 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>How about rMarkdown?</title>
-      <link>/post/how-about-rmarkdown/</link>
+      <link>https://lubor.netlify.com/post/how-about-rmarkdown/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-about-rmarkdown/</guid>
+      <guid>https://lubor.netlify.com/post/how-about-rmarkdown/</guid>
       <description>&lt;p&gt;Use the long name of the extension to do the trick:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;hist(rnorm(1000))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;/post/2018-12-27-how-about-rmarkdown_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lubor.netlify.com/post/2018-12-27-how-about-rmarkdown_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Example Page</title>
-      <link>/tutorial/example/</link>
+      <link>https://lubor.netlify.com/tutorial/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate>
       
-      <guid>/tutorial/example/</guid>
+      <guid>https://lubor.netlify.com/tutorial/example/</guid>
       <description>
 
 &lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
@@ -128,21 +128,11 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0200</pubDate>
-      
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Example Talk</title>
-      <link>/talk/example/</link>
+      <link>https://lubor.netlify.com/talk/example/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0100</pubDate>
       
-      <guid>/talk/example/</guid>
+      <guid>https://lubor.netlify.com/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;p&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/p&gt;
 
@@ -163,19 +153,19 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>External Project</title>
-      <link>/project/external-project/</link>
+      <link>https://lubor.netlify.com/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/project/external-project/</guid>
+      <guid>https://lubor.netlify.com/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>/project/internal-project/</link>
+      <link>https://lubor.netlify.com/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/project/internal-project/</guid>
+      <guid>https://lubor.netlify.com/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -190,10 +180,10 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Academic: the website designer for Hugo</title>
-      <link>/post/getting-started/</link>
+      <link>https://lubor.netlify.com/post/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/post/getting-started/</guid>
+      <guid>https://lubor.netlify.com/post/getting-started/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Academic&lt;/strong&gt; makes it easy to create a beautiful website for free using Markdown. Customize anything on your site with widgets, themes, and language packs.&lt;/p&gt;
@@ -263,8 +253,8 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-1950s.png&#34; data-caption=&#34;1950s&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-1950s.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-1950s.png&#34; data-caption=&#34;1950s&#34;&gt;
+  &lt;img src=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-1950s.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -289,8 +279,8 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-apogee.png&#34; data-caption=&#34;Apogee&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-apogee.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-apogee.png&#34; data-caption=&#34;Apogee&#34;&gt;
+  &lt;img src=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-apogee.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -315,8 +305,8 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-coffee-playfair.png&#34; data-caption=&#34;Coffee theme with Playfair font&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-coffee-playfair.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-coffee-playfair.png&#34; data-caption=&#34;Coffee theme with Playfair font&#34;&gt;
+  &lt;img src=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-coffee-playfair.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -341,8 +331,8 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-cupcake.png&#34; data-caption=&#34;Cupcake&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-cupcake.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-cupcake.png&#34; data-caption=&#34;Cupcake&#34;&gt;
+  &lt;img src=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-cupcake.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -367,8 +357,8 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-dark.png&#34; data-caption=&#34;Dark&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-dark.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-dark.png&#34; data-caption=&#34;Dark&#34;&gt;
+  &lt;img src=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-dark.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -393,8 +383,8 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-default.png&#34; data-caption=&#34;Default&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-default.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-default.png&#34; data-caption=&#34;Default&#34;&gt;
+  &lt;img src=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-default.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -419,8 +409,8 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-forest.png&#34; data-caption=&#34;Forest&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-forest.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-forest.png&#34; data-caption=&#34;Forest&#34;&gt;
+  &lt;img src=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-forest.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -445,8 +435,8 @@ frameWidget(p2)&lt;/code&gt;&lt;/pre&gt;
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-ocean.png&#34; data-caption=&#34;Ocean&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-ocean.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-ocean.png&#34; data-caption=&#34;Ocean&#34;&gt;
+  &lt;img src=&#34;https://lubor.netlify.com/post/getting-started/gallery/theme-ocean.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
 
@@ -562,20 +552,20 @@ git submodule update --init --recursive
     
     <item>
       <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>/publication/person-re-id/</link>
+      <link>https://lubor.netlify.com/publication/person-re-id/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0200</pubDate>
       
-      <guid>/publication/person-re-id/</guid>
+      <guid>https://lubor.netlify.com/publication/person-re-id/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://lubor.netlify.com/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://lubor.netlify.com/post/2015-07-23-r-rmarkdown/</guid>
       <description>
 
 
@@ -612,7 +602,7 @@ pie(
   init.angle = -50, border = NA
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://lubor.netlify.com/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
@@ -623,20 +613,20 @@ Figure 1: A fancy pie chart.
     
     <item>
       <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search/</link>
+      <link>https://lubor.netlify.com/publication/clothing-search/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0200</pubDate>
       
-      <guid>/publication/clothing-search/</guid>
+      <guid>https://lubor.netlify.com/publication/clothing-search/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>/slides/example-slides/</link>
+      <link>https://lubor.netlify.com/slides/example-slides/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/slides/example-slides/</guid>
+      <guid>https://lubor.netlify.com/slides/example-slides/</guid>
       <description>
 
 &lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;

@@ -20,15 +20,6 @@ date_format = "January 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "Asistant Professor"
-  company = "Tomas Baťa University"
-  company_url = ""
-  location = "Czech Republic"
-  date_start = "2018-09-02"
-  date_end = "up today"
-  description = """Teaching Econometrics (graduate course) and PhD course Research Methodology (statistical part). """
-
-[[experience]]
   title = "Senior Analyst"
   company = "Baoviet Security"
   company_url = ""
