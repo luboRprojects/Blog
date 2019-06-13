@@ -18,6 +18,16 @@ date_format = "January 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+[[experience]]
+  title = "Asistant Professor"
+  company = "Tomas Baťa University"
+  company_url = ""
+  location = "Czech Republic"
+  date_start = "2018-09-02"
+  date_end = "up today"
+  description = """Teaching Econometrics (graduate course) and PhD course Research Methodology (statistical part). """
+
 [[experience]]
   title = "Senior Analyst"
   company = "Baoviet Security"
@@ -46,7 +56,7 @@ date_format = "January 2006"
   title = "Asistant Professor"
   company = "Tomas Baťa University"
   company_url = ""
-  location = "California"
+  location = "Czech Republic"
   date_start = "2016-01-01"
   date_end = "2016-12-31"
   description = """Taught graduate course econometrics and PhD course Research Methodology (statistical part)."""
