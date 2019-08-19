@@ -23,16 +23,7 @@ A traditional approach to identify “cause and effects” in the context of tim
     </item>
     
     <item>
-      <title>How About Plotly?</title>
-      <link>/post/how-about-plotly/</link>
-      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/how-about-plotly/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plotly2</title>
+      <title>Plotly Integration</title>
       <link>/post/plotly2/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
@@ -49,17 +40,6 @@ library(widgetframe)library(dplyr)library(ggplot2)library(plotly)library(web
       <guid>/post/how-about-rmarkdown/</guid>
       <description>Use the long name of the extension to do the trick:
 hist(rnorm(1000))  </description>
-    </item>
-    
-    <item>
-      <title>Academic: the website designer for Hugo</title>
-      <link>/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>/post/getting-started/</guid>
-      <description>Academic makes it easy to create a beautiful website for free using Markdown. Customize anything on your site with widgets, themes, and language packs.
-Follow our easy step by step guide to learn how to build your own free website with Academic. Check out the personal demo or the business demo of what you&amp;rsquo;ll get in less than 10 minutes.
- View the documentation Ask a question Request a feature or report a bug Updating?</description>
     </item>
     
     <item>
