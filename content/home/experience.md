@@ -28,7 +28,7 @@ date_format = "January 2006"
 
 
 [[experience]]
-  title = "Senior Analyst1"
+  title = "Senior Analyst"
   company = "Baoviet Security"
   company_url = ""
   location = "Vietnam"

@@ -67,6 +67,8 @@
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
 
     
 
@@ -338,9 +340,9 @@
 
     
 
-<h1 id="biography">Biography</h1>
+<h1 id="about-me">About me</h1>
 
-<p>Lubor Homolka focuses on the Finance and application of statistical analysis.</p>
+<p>I focus on the forecasting in the economics and finance. I am particularly interested in the sentiment analysis, elicitation of experts&rsquo; knowledge and its relation to the forecasting performance.</p>
 
 
     <div class="row">
@@ -350,11 +352,11 @@
         <h3>Interests</h3>
         <ul class="ul-interests">
           
-          <li>Finance</li>
+          <li>Economics</li>
           
           <li>Forecasting</li>
           
-          <li>R programming and reproducibility</li>
+          <li>R programming</li>
           
         </ul>
       </div>
@@ -511,7 +513,7 @@
               <div class="text-right">Vietnam</div>
               
             </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Senior Analyst1</h4>
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Senior Analyst</h4>
             <h4 class="card-title exp-company text-muted my-0">Baoviet Security</h4>
             <div class="card-text">Responsibilities include:</p>
 
@@ -997,74 +999,6 @@
   
   
   
-  <section id="tags" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Tags</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-    
-      
-      
-
-      
-      
-      
-      
-      
-
-      <div id="tag-cloud">
-        
-          
-          
-          
-          <a href="/tags/academic/" style="font-size:0.8rem">Academic</a>
-        
-          
-          
-          
-          <a href="/tags/deep-learning/" style="font-size:0.8rem">Deep Learning</a>
-        
-          
-          
-          
-          <a href="/tags/demo/" style="font-size:0.8rem">Demo</a>
-        
-          
-          
-          
-          <a href="/tags/r-markdown/" style="font-size:0.8rem">R Markdown</a>
-        
-          
-          
-          
-          <a href="/tags/plot/" style="font-size:0.8rem">plot</a>
-        
-          
-          
-          
-          <a href="/tags/regression/" style="font-size:0.8rem">regression</a>
-        
-      </div>
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
   <section id="contact" class="home-section">
     <div class="container">
       
@@ -1104,7 +1038,7 @@
       
       <li>
         <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
-        <span id="person-address" itemprop="address">Faculty of Management and Economics, Building U2, Mostní 5139, 760 01 Zlín</span>
+        <span id="person-address" itemprop="address">Faculty of Management and Economics, office 208, Mostní 5139, 760 01 Zlín</span>
       </li>
       
 
@@ -1120,6 +1054,16 @@
 
     </ul>
 
+    
+    <div class="d-none">
+      <input id="map-provider" value="2">
+      <input id="map-lat" value="49.22098">
+      <input id="map-lng" value="17.65728">
+      <input id="map-dir" value="Faculty of Management and Economics, office 208, Mostní 5139, 760 01 Zlín">
+      <input id="map-zoom" value="15">
+      <input id="map-api-key" value="">
+    </div>
+    <div id="map"></div>
     
 
   </div>
@@ -1216,6 +1160,8 @@
     
 
     
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
     
 
     

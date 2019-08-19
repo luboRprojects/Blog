@@ -10,9 +10,9 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Finance",
+    "Economics",
     "Forecasting",
-    "R programming and reproducibility"
+    "R programming"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -25,6 +25,7 @@ weight = 5
  
 +++
 
-# Biography
+# About me
 
-Lubor Homolka focuses on the Finance and application of statistical analysis.
+I focus on the forecasting in the economics and finance. I am particularly interested in the sentiment analysis, elicitation of experts' knowledge and its relation to the forecasting performance. 
+

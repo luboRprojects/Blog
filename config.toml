@@ -65,7 +65,7 @@ enableGitInfo = false
 
   # Details for the Contact Widget
   email = "homolka@utb.cz"
-  address = "Faculty of Management and Economics, Building U2, Mostní 5139, 760 01 Zlín"
+  address = "Faculty of Management and Economics, office 208, Mostní 5139, 760 01 Zlín"
   office_hours = """
   Wednesday 09:00 to 10:00\\
   Otherwise email to book an appointment
@@ -97,10 +97,10 @@ enableGitInfo = false
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  map = 0
-  map_api_key = ""
-  latitude = "37.4275"
-  longitude = "-122.1697"
+  map = 2
+  # map_api_key = ""
+  latitude = "49.22098"
+  longitude = "17.65728"
   zoom = 15
 
   # SITE SETUP
