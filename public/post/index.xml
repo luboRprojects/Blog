@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>https://lubor.netlify.com/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https://lubor.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mutliple Time Series Granger Causality</title>
-      <link>https://lubor.netlify.com/post/mutliple-time-series-granger-causality/</link>
+      <link>/post/mutliple-time-series-granger-causality/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lubor.netlify.com/post/mutliple-time-series-granger-causality/</guid>
+      <guid>/post/mutliple-time-series-granger-causality/</guid>
       <description>We have recently submitted a paper about the short-term car registration forecasting. Forecasting models were based on several underlying variables which were analysed by a standard Vector Autoregressive Model. As the main purpose of the paper was not to present a black-box model with a good predictive power, we needed to analyse an importants of the car registration determinants.
 A traditional approach to identify “cause and effects” in the context of time series analysis is to perform the Granger Causality test.</description>
     </item>
     
     <item>
       <title>How About Plotly?</title>
-      <link>https://lubor.netlify.com/post/how-about-plotly/</link>
+      <link>/post/how-about-plotly/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lubor.netlify.com/post/how-about-plotly/</guid>
+      <guid>/post/how-about-plotly/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Plotly2</title>
-      <link>https://lubor.netlify.com/post/plotly2/</link>
+      <link>/post/plotly2/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lubor.netlify.com/post/plotly2/</guid>
+      <guid>/post/plotly2/</guid>
       <description>Let’s try some plotly
 library(widgetframe)library(dplyr)library(ggplot2)library(plotly)library(webshot)p1 &amp;lt;- mtcars %&amp;gt;%mutate(Cylinders = as.factor(cyl)) %&amp;gt;%ggplot(., aes(x=hp, y=mpg, col=Cylinders) ) + geom_point(size=4, alpha=0.7) + theme_bw()p2 &amp;lt;- ggplotly(p1)frameWidget(p2){&#34;x&#34;:{&#34;url&#34;:&#34;/post/2019-02-02-plotly2_files/figure-html//widgets/widget_unnamed-chunk-2.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}</description>
     </item>
     
     <item>
       <title>How about rMarkdown?</title>
-      <link>https://lubor.netlify.com/post/how-about-rmarkdown/</link>
+      <link>/post/how-about-rmarkdown/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://lubor.netlify.com/post/how-about-rmarkdown/</guid>
+      <guid>/post/how-about-rmarkdown/</guid>
       <description>Use the long name of the extension to do the trick:
 hist(rnorm(1000))  </description>
     </item>
     
     <item>
       <title>Academic: the website designer for Hugo</title>
-      <link>https://lubor.netlify.com/post/getting-started/</link>
+      <link>/post/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://lubor.netlify.com/post/getting-started/</guid>
+      <guid>/post/getting-started/</guid>
       <description>Academic makes it easy to create a beautiful website for free using Markdown. Customize anything on your site with widgets, themes, and language packs.
 Follow our easy step by step guide to learn how to build your own free website with Academic. Check out the personal demo or the business demo of what you&amp;rsquo;ll get in less than 10 minutes.
  View the documentation Ask a question Request a feature or report a bug Updating?</description>
@@ -64,10 +64,10 @@ Follow our easy step by step guide to learn how to build your own free website w
     
     <item>
       <title>Hello R Markdown</title>
-      <link>https://lubor.netlify.com/post/2015-07-23-r-rmarkdown/</link>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>https://lubor.netlify.com/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>

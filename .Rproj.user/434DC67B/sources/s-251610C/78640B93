@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1560432214119.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "78640B93",
+    "lastKnownWriteTime" : 1560457747,
+    "last_content_update" : 1560457747229,
+    "path" : "C:/rProjects/Blog/content/post/2019-06-12-mutliple-time-series-granger-causality.Rmd",
+    "project_path" : "content/post/2019-06-12-mutliple-time-series-granger-causality.Rmd",
+    "properties" : {
+        "cursorPosition" : "49,0",
+        "scrollLine" : "36"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

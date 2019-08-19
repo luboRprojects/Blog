@@ -4,7 +4,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/post/mutliple-time-series-granger-causality/</loc>
+      <loc>/post/mutliple-time-series-granger-causality/</loc>
       <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/post/how-about-plotly/</loc>
+      <loc>/post/how-about-plotly/</loc>
       <lastmod>2019-02-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/post/plotly2/</loc>
+      <loc>/post/plotly2/</loc>
       <lastmod>2019-02-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/post/how-about-rmarkdown/</loc>
+      <loc>/post/how-about-rmarkdown/</loc>
       <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/tutorial/example/</loc>
+      <loc>/tutorial/example/</loc>
       <lastmod>2018-09-09T00:00:00+02:00</lastmod>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/tutorial/</loc>
+      <loc>/tutorial/</loc>
       <lastmod>2018-09-09T00:00:00+02:00</lastmod>
     </url>
     
@@ -52,7 +52,15 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/talk/example/</loc>
+      <loc>/privacy/</loc>
+      <lastmod>2018-06-28T00:00:00+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/talk/example/</loc>
       <lastmod>2017-01-01T00:00:00+01:00</lastmod>
     </url>
     
@@ -60,7 +68,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/post/</loc>
+      <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+01:00</lastmod>
     </url>
     
@@ -68,7 +76,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/publication/</loc>
+      <loc>/publication/</loc>
       <lastmod>2017-01-01T00:00:00+01:00</lastmod>
     </url>
     
@@ -76,7 +84,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/talk/</loc>
+      <loc>/talk/</loc>
       <lastmod>2017-01-01T00:00:00+01:00</lastmod>
     </url>
     
@@ -84,7 +92,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/project/external-project/</loc>
+      <loc>/project/external-project/</loc>
       <lastmod>2016-04-27T00:00:00+02:00</lastmod>
     </url>
     
@@ -92,7 +100,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/project/internal-project/</loc>
+      <loc>/project/internal-project/</loc>
       <lastmod>2016-04-27T00:00:00+02:00</lastmod>
     </url>
     
@@ -100,7 +108,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/post/getting-started/</loc>
+      <loc>/post/getting-started/</loc>
       <lastmod>2018-01-13T00:00:00+01:00</lastmod>
     </url>
     
@@ -108,7 +116,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/publication/person-re-id/</loc>
+      <loc>/publication/person-re-id/</loc>
       <lastmod>2015-09-01T00:00:00+02:00</lastmod>
     </url>
     
@@ -116,7 +124,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/post/2015-07-23-r-rmarkdown/</loc>
+      <loc>/post/2015-07-23-r-rmarkdown/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     </url>
     
@@ -124,7 +132,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/publication/clothing-search/</loc>
+      <loc>/publication/clothing-search/</loc>
       <lastmod>2013-07-01T00:00:00+02:00</lastmod>
     </url>
     
@@ -132,7 +140,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/</loc>
+      <loc>/</loc>
       <lastmod>2017-10-15T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -141,7 +149,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/publication_types/1/</loc>
+      <loc>/publication_types/1/</loc>
       <lastmod>2013-07-01T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -150,7 +158,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/publication_types/2/</loc>
+      <loc>/publication_types/2/</loc>
       <lastmod>2015-09-01T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -159,7 +167,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/tags/academic/</loc>
+      <loc>/tags/academic/</loc>
       <lastmod>2018-01-13T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -168,7 +176,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/categories/</loc>
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -176,7 +184,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/tags/deep-learning/</loc>
+      <loc>/tags/deep-learning/</loc>
       <lastmod>2016-04-27T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -185,7 +193,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/tags/demo/</loc>
+      <loc>/tags/demo/</loc>
       <lastmod>2016-04-27T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -194,7 +202,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/project/</loc>
+      <loc>/project/</loc>
       <lastmod>2016-04-27T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -203,7 +211,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/publication_types/</loc>
+      <loc>/publication_types/</loc>
       <lastmod>2013-07-01T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -212,7 +220,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/categories/r/</loc>
+      <loc>/categories/r/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -221,7 +229,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/tags/r-markdown/</loc>
+      <loc>/tags/r-markdown/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -230,7 +238,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/slides/</loc>
+      <loc>/slides/</loc>
       <priority>0</priority>
     </url>
     
@@ -238,14 +246,14 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/slides/example-slides/</loc>
+      <loc>/slides/example-slides/</loc>
     </url>
     
   
     
     <url>
     
-      <loc>https://lubor.netlify.com/tags/</loc>
+      <loc>/tags/</loc>
       <lastmod>2018-01-13T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -254,7 +262,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/tags/plot/</loc>
+      <loc>/tags/plot/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -263,7 +271,7 @@
     
     <url>
     
-      <loc>https://lubor.netlify.com/tags/regression/</loc>
+      <loc>/tags/regression/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>

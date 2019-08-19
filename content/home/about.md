@@ -21,11 +21,6 @@ weight = 5
   institution = "Tomas Baťa University"
   year = 2016
 
-[[education.courses]]
-  course = "Graduate course Finance"
-  institution = "Massachusetts Institute of Technology"
-  year = 2011
-
 
  
 +++

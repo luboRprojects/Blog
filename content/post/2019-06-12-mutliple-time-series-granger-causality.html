@@ -24,16 +24,48 @@ image:
 <p>This example shows the analysis of the tree time series where the first time series <em>ts1</em> is a confounding time series.</p>
 <pre class="r"><code>library(DiagrammeR)
 
-df &lt;- data.frame(col1 = c( &quot;Cat&quot;, &quot;Dog&quot;, &quot;Bird&quot;),
-                 col2 = c( &quot;Feline&quot;, &quot;Canis&quot;, &quot;Avis&quot;), 
-                 stringsAsFactors=FALSE)
-uniquenodes &lt;- unique(c(df$col1, df$col2))
+grViz(&quot;
+ digraph boxes_and_circles {
 
-nodes &lt;- create_node_df(n=length(uniquenodes), nodes = seq(uniquenodes), type=&quot;number&quot;, label=uniquenodes)
-edges &lt;- create_edge_df(from=match(df$col1, uniquenodes), to=match(df$col2, uniquenodes), rel=&quot;related&quot;)
+ graph [overlap = false, fontsize = 1, rankdir=&#39;LR&#39;]
 
-g &lt;- create_graph(nodes_df=nodes, edges_df=edges)
-render_graph(g)</code></pre>
+ TS1 -&gt; TS2 [label = &#39;AR1 + &amp;#945;&amp;#183;TS1&#39;]
+ TS2 -&gt; TS3 [label = &#39;No Relation&#39;, color= &#39;red&#39;, fontcolor=&#39;red&#39;] 
+ TS1 -&gt; TS3 [label = &#39;AR1 + &amp;#946;&amp;#183;TS1&#39;]
+}
+&quot;)</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Cat\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Dog\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [label = \"Bird\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"4\" [label = \"Feline\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"5\" [label = \"Canis\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"6\" [label = \"Avis\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"1\"->\"4\" \n  \"2\"->\"5\" \n  \"3\"->\"6\" \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\n digraph boxes_and_circles {\n\n graph [overlap = false, fontsize = 1, rankdir=\"LR\"]\n\n TS1 -> TS2 [label = \"AR1 + &#945;&#183;TS1\"]\n TS2 -> TS3 [label = \"No Relation\", color= \"red\", fontcolor=\"red\"] \n TS1 -> TS3 [label = \"AR1 + &#946;&#183;TS1\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>The first time series (TS) is generated as an autoregressive proces AR(1):</p>
+<pre class="r"><code>library(dplyr)
+
+ts1 &lt;-  arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) %&gt;% as.numeric</code></pre>
+<p>The second time series TS2 is computed as a standalone AR(1) process plus TS2 multiplied by value <span class="math inline">\(\alpha=0.7\)</span>. Similarly, TS is based only only on its own autoregressive part plus <span class="math inline">\(\beta=0.7 \cdot TS1\)</span> values.</p>
+<pre class="r"><code>alpha &lt;- 0.7
+beta  &lt;- 0.7
+
+ts2 &lt;- arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) + alpha * dplyr::lag(ts1, 1) 
+ts3 &lt;- arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) + beta * dplyr::lag(ts1, 1) 
+
+ts1 &lt;- ts1 %&gt;% as.numeric
+ts2 &lt;- ts2 %&gt;% as.numeric</code></pre>
+<pre class="r"><code>grViz(&quot;
+ digraph boxes_and_circles {
+
+ graph [overlap = false, fontsize = 1, rankdir=&#39;LR&#39;]
+
+ TS1 -&gt; TS2 [label = &#39;AR1 + &amp;#945;&amp;#183;TS1&#39;]
+ TS2 -&gt; TS3 [label = &#39;AR1 + &amp;#947;&amp;#183;TS2&#39;] 
+ TS1 -&gt; TS3 [label = &#39;AR1 + &amp;#946;&amp;#183;TS1&#39;]
+}
+&quot;)</code></pre>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"diagram":"\n digraph boxes_and_circles {\n\n graph [overlap = false, fontsize = 1, rankdir=\"LR\"]\n\n TS1 -> TS2 [label = \"AR1 + &#945;&#183;TS1\"]\n TS2 -> TS3 [label = \"AR1 + &#947;&#183;TS2\"] \n TS1 -> TS3 [label = \"AR1 + &#946;&#183;TS1\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>gamma &lt;- 0.7
+
+ ts1 &lt;-  arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) %&gt;% as.numeric
+ ts2 &lt;-  arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) + 
+   alpha * dplyr::lag(ts1, 1) %&gt;% as.numeric
+ ts3 &lt;-  arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) + 
+   beta  * dplyr::lag(ts1, 1) + c(NA, gamma * dplyr::lag(ts2[-1], 1) ) %&gt;% as.numeric</code></pre>
 </div>
