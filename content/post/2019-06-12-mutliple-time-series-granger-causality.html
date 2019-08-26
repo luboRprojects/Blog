@@ -64,24 +64,8 @@ data.frame(ts2, ts3) %&gt;%
     geom_point() + geom_line() + theme_bw()</code></pre>
 <p><img src="/post/2019-06-12-mutliple-time-series-granger-causality_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>We will skip formal testing of stationarity. Let’s fit the Vector Autoregressive Model.</p>
-<pre class="r"><code>library(vars)</code></pre>
-<pre><code>## Loading required package: MASS</code></pre>
-<pre><code>## 
-## Attaching package: &#39;MASS&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
-## 
-##     select</code></pre>
-<pre><code>## Loading required package: strucchange</code></pre>
-<pre><code>## Loading required package: zoo</code></pre>
-<pre><code>## 
-## Attaching package: &#39;zoo&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     as.Date, as.Date.numeric</code></pre>
-<pre><code>## Loading required package: sandwich</code></pre>
-<pre><code>## Loading required package: urca</code></pre>
-<pre><code>## Loading required package: lmtest</code></pre>
-<pre class="r"><code>library(broom)
+<pre class="r"><code>library(vars)
+library(broom)
 varData1 &lt;- data.frame(ts2, ts3)
 varFit1  &lt;- vars::VAR(y=varData1[-1, ])</code></pre>
 <p>We are interested in the part of the VAR where the TS3 is a dependent variable.</p>
@@ -117,16 +101,16 @@ p.value
 ts2.l1
 </td>
 <td style="text-align:right;">
-0.136
+0.203
 </td>
 <td style="text-align:right;">
-0.101
+0.099
 </td>
 <td style="text-align:right;">
-1.353
+2.058
 </td>
 <td style="text-align:right;">
-0.179
+0.042
 </td>
 </tr>
 <tr>
@@ -134,13 +118,13 @@ ts2.l1
 ts3.l1
 </td>
 <td style="text-align:right;">
-0.475
+0.470
 </td>
 <td style="text-align:right;">
 0.100
 </td>
 <td style="text-align:right;">
-4.738
+4.713
 </td>
 <td style="text-align:right;">
 0.000
@@ -151,16 +135,16 @@ ts3.l1
 const
 </td>
 <td style="text-align:right;">
--0.005
+0.006
 </td>
 <td style="text-align:right;">
 0.065
 </td>
 <td style="text-align:right;">
--0.073
+0.098
 </td>
 <td style="text-align:right;">
-0.942
+0.922
 </td>
 </tr>
 </tbody>
@@ -172,7 +156,7 @@ const
 ##  Granger causality H0: ts2 do not Granger-cause ts3
 ## 
 ## data:  VAR object varFit1
-## F-Test = 1.8314, df1 = 1, df2 = 190, p-value = 0.1776</code></pre>
+## F-Test = 4.2338, df1 = 1, df2 = 190, p-value = 0.04099</code></pre>
 <p>We can reject the null and can claim there is an evidence for TS2 Granger-Causes TS3. This is exactly what we have expected.</p>
 <pre class="r"><code>grViz(&quot;
  digraph boxes_and_circles {

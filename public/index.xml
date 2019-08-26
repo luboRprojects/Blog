@@ -71,24 +71,8 @@ data.frame(ts2, ts3) %&amp;gt;%
     geom_point() + geom_line() + theme_bw()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2019-06-12-mutliple-time-series-granger-causality_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We will skip formal testing of stationarity. Let’s fit the Vector Autoregressive Model.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(vars)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: MASS&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 
-## Attaching package: &amp;#39;MASS&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## The following object is masked from &amp;#39;package:dplyr&amp;#39;:
-## 
-##     select&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: strucchange&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: zoo&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 
-## Attaching package: &amp;#39;zoo&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:base&amp;#39;:
-## 
-##     as.Date, as.Date.numeric&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: sandwich&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: urca&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: lmtest&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(broom)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(vars)
+library(broom)
 varData1 &amp;lt;- data.frame(ts2, ts3)
 varFit1  &amp;lt;- vars::VAR(y=varData1[-1, ])&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We are interested in the part of the VAR where the TS3 is a dependent variable.&lt;/p&gt;
@@ -124,16 +108,16 @@ p.value
 ts2.l1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.136
+0.203
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.101
+0.099
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-1.353
+2.058
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.179
+0.042
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -141,13 +125,13 @@ ts2.l1
 ts3.l1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.475
+0.470
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 0.100
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-4.738
+4.713
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 0.000
@@ -158,16 +142,16 @@ ts3.l1
 const
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
--0.005
+0.006
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 0.065
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
--0.073
+0.098
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.942
+0.922
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -179,7 +163,7 @@ const
 ##  Granger causality H0: ts2 do not Granger-cause ts3
 ## 
 ## data:  VAR object varFit1
-## F-Test = 1.8314, df1 = 1, df2 = 190, p-value = 0.1776&lt;/code&gt;&lt;/pre&gt;
+## F-Test = 4.2338, df1 = 1, df2 = 190, p-value = 0.04099&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can reject the null and can claim there is an evidence for TS2 Granger-Causes TS3. This is exactly what we have expected.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;grViz(&amp;quot;
  digraph boxes_and_circles {

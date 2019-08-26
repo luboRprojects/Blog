@@ -76,7 +76,7 @@ data.frame(ts2, ts3) %>%
 
 We will skip formal testing of stationarity. Let's fit the Vector Autoregressive Model.
 
-```{r}
+```{r, message=FALSE}
 library(vars)
 library(broom)
 varData1 <- data.frame(ts2, ts3)
