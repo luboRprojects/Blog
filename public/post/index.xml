@@ -18,8 +18,7 @@
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/mutliple-time-series-granger-causality/</guid>
-      <description>We have recently submitted a paper about the short-term car registration forecasting. Forecasting models were based on several underlying variables which were analysed by a standard Vector Autoregressive Model. As the main purpose of the paper was not to present a black-box model with a good predictive power, we needed to analyse an importants of the car registration determinants.
-A traditional approach to identify “cause and effects” in the context of time series analysis is to perform the Granger Causality test.</description>
+      <description>I have been recently working on a paper about the short-term car registration forecasting. Forecasting models were based on several underlying variables which were analysed by a standard Vector Autoregressive Model. As the main purpose of the paper was not to present a black-box model with a good predictive power, we needed to analyse leading indicators. A traditional approach to identify “cause and effects” in the context of time series analysis is to perform the Granger Causality test.</description>
     </item>
     
     <item>

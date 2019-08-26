@@ -21,17 +21,33 @@
 &lt;script src=&#34;/rmarkdown-libs/viz/viz.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/DiagrammeR-styles/styles.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;/rmarkdown-libs/grViz-binding/grViz.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;We have recently submitted a paper about the short-term car registration forecasting. Forecasting models were based on several underlying variables which were analysed by a standard Vector Autoregressive Model. As the main purpose of the paper was not to present a black-box model with a good predictive power, we needed to analyse an importants of the car registration determinants.&lt;/p&gt;
-&lt;p&gt;A traditional approach to identify &lt;em&gt;“cause and effects”&lt;/em&gt; in the context of time series analysis is to perform the Granger Causality test. Surprisingly, a treatment of the multivariate is not discussed much. Typically, two variables settings is presented with the caveat that solution works even for a more variables. This is only a partially true.&lt;/p&gt;
-&lt;p&gt;In the following text we will go through the simple 3 time-series example with various settings of interconnections.&lt;/p&gt;
+&lt;p&gt;I have been recently working on a paper about the short-term car registration forecasting. Forecasting models were based on several underlying variables which were analysed by a standard Vector Autoregressive Model. As the main purpose of the paper was not to present a black-box model with a good predictive power, we needed to analyse leading indicators. A traditional approach to identify &lt;em&gt;“cause and effects”&lt;/em&gt; in the context of time series analysis is to perform the Granger Causality test. Causality in this context means that an inclusion of the variable reduces a MSE error. Some variables might be only good signals - not a true underlying causes of car registrations.&lt;/p&gt;
+&lt;p&gt;Surprisingly, a treatment of the multivariate Granger-causality concept is not discussed much. Typically, two variables settings is presented with the caveat that solution works even for a more variables. This is only a partially true.&lt;/p&gt;
+&lt;p&gt;In the following text we will go through the simple 3 time-series example with various settings of interconnections. Let’s start with stationary time-series only.&lt;/p&gt;
 &lt;div id=&#34;three-variables-one-driver&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Three Variables, One driver&lt;/h2&gt;
 &lt;p&gt;This example shows the analysis of the tree time series where the first time series &lt;em&gt;ts1&lt;/em&gt; is a confounding time series.&lt;/p&gt;
+&lt;p&gt;The first time series (TS1) is generated as an autoregressive proces AR(1):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr) # for %&amp;gt;%
+
+ts1 &amp;lt;-  stats::arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) %&amp;gt;% as.numeric&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The second time series TS2 is computed as a standalone AR(1) process plus TS2 multiplied by value &lt;span class=&#34;math inline&#34;&gt;\(\alpha=0.7\)&lt;/span&gt;. Similarly, TS3 is based only on its own autoregressive part plus &lt;span class=&#34;math inline&#34;&gt;\(\beta=0.7 \cdot TS1\)&lt;/span&gt; values.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;alpha &amp;lt;- 0.7
+beta  &amp;lt;- 0.7
+
+set.seed(123)
+ts2 &amp;lt;- arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) + alpha * dplyr::lag(ts1, 1) 
+ts3 &amp;lt;- arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) + beta * dplyr::lag(ts1, 1) 
+
+ts1 &amp;lt;- ts1 %&amp;gt;% as.numeric
+ts2 &amp;lt;- ts2 %&amp;gt;% as.numeric&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This settings can be visualised in the diagram:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(DiagrammeR)
 
-grViz(&amp;quot;
+DiagrammeR::grViz(&amp;quot;
  digraph boxes_and_circles {
 
  graph [overlap = false, fontsize = 1, rankdir=&amp;#39;LR&amp;#39;]
@@ -43,19 +59,128 @@ grViz(&amp;quot;
 &amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;grViz html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;diagram&#34;:&#34;\n digraph boxes_and_circles {\n\n graph [overlap = false, fontsize = 1, rankdir=\&#34;LR\&#34;]\n\n TS1 -&gt; TS2 [label = \&#34;AR1 + &amp;#945;&amp;#183;TS1\&#34;]\n TS2 -&gt; TS3 [label = \&#34;No Relation\&#34;, color= \&#34;red\&#34;, fontcolor=\&#34;red\&#34;] \n TS1 -&gt; TS3 [label = \&#34;AR1 + &amp;#946;&amp;#183;TS1\&#34;]\n}\n&#34;,&#34;config&#34;:{&#34;engine&#34;:&#34;dot&#34;,&#34;options&#34;:null}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;The first time series (TS) is generated as an autoregressive proces AR(1):&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+&lt;p&gt;What should we expect to see now? TS1 causes TS3 as it is a function of TS plus an indepedent AR(1) process. TS1 causes TS2 for the very same reason. Therefore, there should be a strong correlation between TS2 and TS3. Again, TS2 is just a variable which consists of information from TS1 plus indepedent AR(1). The sole “effect” of TS2 is just an AR(1) process which is masked by the influence of TS1.&lt;/p&gt;
+&lt;p&gt;This data-generating process is unkown to the analyst. Let’s assume the analyst is not aware of the TS1 and observes only TS2 and TS3.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(tidyr)
 
-ts1 &amp;lt;-  arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) %&amp;gt;% as.numeric&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The second time series TS2 is computed as a standalone AR(1) process plus TS2 multiplied by value &lt;span class=&#34;math inline&#34;&gt;\(\alpha=0.7\)&lt;/span&gt;. Similarly, TS is based only only on its own autoregressive part plus &lt;span class=&#34;math inline&#34;&gt;\(\beta=0.7 \cdot TS1\)&lt;/span&gt; values.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;alpha &amp;lt;- 0.7
-beta  &amp;lt;- 0.7
+data.frame(ts2, ts3) %&amp;gt;% 
+  dplyr::mutate(Date = seq(as.Date(&amp;quot;2000/1/1&amp;quot;), by = &amp;quot;month&amp;quot;, length.out = 100))%&amp;gt;%
+  tidyr::gather(TS, Value, -Date) %&amp;gt;%
+   ggplot(., aes(x=Date, y=Value, colour=TS) ) +
+    geom_point() + geom_line() + theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-12-mutliple-time-series-granger-causality_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We will skip formal testing of stationarity. Let’s fit the Vector Autoregressive Model.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(vars)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: MASS&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;MASS&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following object is masked from &amp;#39;package:dplyr&amp;#39;:
+## 
+##     select&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: strucchange&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: zoo&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;zoo&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     as.Date, as.Date.numeric&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: sandwich&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: urca&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: lmtest&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(broom)
+varData1 &amp;lt;- data.frame(ts2, ts3)
+varFit1  &amp;lt;- vars::VAR(y=varData1[-1, ])&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We are interested in the part of the VAR where the TS3 is a dependent variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(knitr)
+library(kableExtra)
 
-ts2 &amp;lt;- arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) + alpha * dplyr::lag(ts1, 1) 
-ts3 &amp;lt;- arima.sim(n = 100, list(ar = c(0.7)), sd = 1/2) + beta * dplyr::lag(ts1, 1) 
-
-ts1 &amp;lt;- ts1 %&amp;gt;% as.numeric
-ts2 &amp;lt;- ts2 %&amp;gt;% as.numeric&lt;/code&gt;&lt;/pre&gt;
+tidy(varFit1$varresult$ts3) %&amp;gt;% 
+  knitr::kable(digits=3) %&amp;gt;%
+  kableExtra::kable_styling(bootstrap_options = &amp;quot;striped&amp;quot;, full_width = F)&lt;/code&gt;&lt;/pre&gt;
+&lt;table class=&#34;table table-striped&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+term
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+estimate
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+std.error
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+statistic
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+p.value
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+ts2.l1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.136
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.101
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.353
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.179
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+ts3.l1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.475
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.100
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4.738
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+const
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.005
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.065
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.073
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.942
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Both the lagged variable of TS3 and TS2 were indetified as statistically significant. Let’s approach to the actual Granger Causality test. There is a function called &lt;em&gt;vars::causality&lt;/em&gt; which performs F-type Granger test. Our model was identified as VAR(1) since the only variables of lag 1 were chosen as optimal (according the to AIC criteria).&lt;/p&gt;
+&lt;p&gt;This function is quite straigtforward:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;causality(varFit1, cause = &amp;quot;ts2&amp;quot;)$Granger # there is also Instantaneous test in .$Instant&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  Granger causality H0: ts2 do not Granger-cause ts3
+## 
+## data:  VAR object varFit1
+## F-Test = 1.8314, df1 = 1, df2 = 190, p-value = 0.1776&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can reject the null and can claim there is an evidence for TS2 Granger-Causes TS3. This is exactly what we have expected.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;grViz(&amp;quot;
  digraph boxes_and_circles {
 
