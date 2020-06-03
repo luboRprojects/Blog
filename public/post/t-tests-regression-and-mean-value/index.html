@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -17,10 +15,12 @@
   
     
   
-  <meta name="description" content="Lecturer">
+  <meta name="description" content="I have been asked by students about the difference between the &ldquo;normal&rdquo; t-test for mean value analysis and the &ldquo;regression&rdquo; t-test many times. So, is there any difference? Let&rsquo;s look the following example to get a practical intuition:
+We will use the mtcars dataset to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission.
+library(dplyr) data(&quot;mtcars&quot;) boxplot(mtcars$cyl ~ mtcars$am)  mtcars %&gt;% group_by(am) %&gt;% summarise(mpgAvg = mean(mpg))  ## # A tibble: 2 x 2 ## am mpgAvg ## &lt;dbl&gt; &lt;dbl&gt; ## 1 0 17.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/tags/">
+  <link rel="alternate" hreflang="en-us" href="/post/t-tests-regression-and-mean-value/">
 
   
 
@@ -88,15 +88,15 @@
   
 
   
-  <link rel="alternate" href="/tags/index.xml" type="application/rss+xml" title="">
-  <link rel="feed" href="/tags/index.xml" type="application/rss+xml" title="">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/tags/">
+  <link rel="canonical" href="/post/t-tests-regression-and-mean-value/">
 
   
   
@@ -108,19 +108,23 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="">
-  <meta property="og:url" content="/tags/">
-  <meta property="og:title" content="Tags | ">
-  <meta property="og:description" content="Lecturer"><meta property="og:image" content="/img/portrait.jpg">
+  <meta property="og:url" content="/post/t-tests-regression-and-mean-value/">
+  <meta property="og:title" content="T-tests: Regression and mean value  | ">
+  <meta property="og:description" content="I have been asked by students about the difference between the &ldquo;normal&rdquo; t-test for mean value analysis and the &ldquo;regression&rdquo; t-test many times. So, is there any difference? Let&rsquo;s look the following example to get a practical intuition:
+We will use the mtcars dataset to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission.
+library(dplyr) data(&quot;mtcars&quot;) boxplot(mtcars$cyl ~ mtcars$am)  mtcars %&gt;% group_by(am) %&gt;% summarise(mpgAvg = mean(mpg))  ## # A tibble: 2 x 2 ## am mpgAvg ## &lt;dbl&gt; &lt;dbl&gt; ## 1 0 17."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2016-04-27T00:00:00&#43;02:00">
+  <meta property="article:published_time" content="2020-06-03T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2020-06-03T00:00:00&#43;00:00">
   
 
   
 
   
 
-  <title>Tags | </title>
+  <title>T-tests: Regression and mean value  | </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -220,7 +224,9 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
 
 
@@ -237,56 +243,304 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">T-tests: Regression and mean value </h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Tags</h1>
+
+<div class="article-metadata">
 
   
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lubor Homolka">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2020-06-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2020-06-03 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Jun 3, 2020
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lubor Homolka">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=T-tests%3a%20Regression%20and%20mean%20value%20&amp;url=%2fpost%2ft-tests-regression-and-mean-value%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2ft-tests-regression-and-mean-value%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2ft-tests-regression-and-mean-value%2f&amp;title=T-tests%3a%20Regression%20and%20mean%20value%20"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2ft-tests-regression-and-mean-value%2f&amp;title=T-tests%3a%20Regression%20and%20mean%20value%20"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=T-tests%3a%20Regression%20and%20mean%20value%20&amp;body=%2fpost%2ft-tests-regression-and-mean-value%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
-  <div>
-    <h2><a href="/tags/deep-learning/">Deep Learning</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/demo/">Demo</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/r/">r</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/statistics/">statistics</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
+    <div class="article-style" itemprop="articleBody">
+      <p>I have been asked by students about the difference between the &ldquo;normal&rdquo; t-test for mean value analysis and the &ldquo;regression&rdquo; t-test many times. So, is there any difference? Let&rsquo;s look the following example to get a practical intuition:</p>
 
-  
+<p>We will use the mtcars dataset to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission.</p>
 
+<pre><code class="language-r">library(dplyr)
+data(&quot;mtcars&quot;)
+boxplot(mtcars$cyl ~ mtcars$am)
+</code></pre>
+
+<p><img src="/post/2020-06-03-t-tests-regression-and-mean-value_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+
+<pre><code class="language-r">mtcars %&gt;% 
+  group_by(am) %&gt;%
+  summarise(mpgAvg = mean(mpg))
+</code></pre>
+
+<pre><code>## # A tibble: 2 x 2
+##      am mpgAvg
+##   &lt;dbl&gt;  &lt;dbl&gt;
+## 1     0   17.1
+## 2     1   24.4
+</code></pre>
+
+<p>Let&rsquo;s run the t-test for difference in means:</p>
+
+<pre><code class="language-r">t.test(mpg ~ am, var.equal = TRUE, data=mtcars)
+</code></pre>
+
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  mpg by am
+## t = -4.1061, df = 30, p-value = 0.000285
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -10.84837  -3.64151
+## sample estimates:
+## mean in group 0 mean in group 1 
+##        17.14737        24.39231
+</code></pre>
+
+<p>And now check the regression outcome (there is no need to code am as factor has only 2 levels).</p>
+
+<pre><code class="language-r">lm(mpg ~ am, data=mtcars) %&gt;%
+  summary
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ am, data = mtcars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -9.3923 -3.0923 -0.2974  3.2439  9.5077 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   17.147      1.125  15.247 1.13e-15 ***
+## am             7.245      1.764   4.106 0.000285 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 4.902 on 30 degrees of freedom
+## Multiple R-squared:  0.3598, Adjusted R-squared:  0.3385 
+## F-statistic: 16.86 on 1 and 30 DF,  p-value: 0.000285
+</code></pre>
+
+<p>Both t-statics equal in absolute value to 4.106.</p>
+
+<p>What does this actually mean? The mean-value t-test tests whether difference between <code>\(\mu_{am=aut} = \mu_{am=man}\)</code>, which can be rewritten as <code>\(\mu_{am=aut} - \mu_{am=man} = 0\)</code>. The &ldquo;regression&rdquo; t-test tests whether the effect of having <code>\(am=aut = 0\)</code>.</p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r/">r</a>
+  
+  <a class="badge badge-light" href="/tags/statistics/">statistics</a>
+  
 </div>
+
+
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <img class="portrait mr-3" src="/img/portrait.jpg" itemprop="image" alt="Avatar">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/">Lubor Homolka</a></h5>
+    <h6 class="card-subtitle">Lecturer</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.cz/citations?user=qySZIkQAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/luboRprojects" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://stackoverflow.com/users/7357438/lstat" target="_blank" rel="noopener">
+          <i class="fab fa-stack-overflow"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
 <div class="container">
   <footer class="site-footer">
   
@@ -444,6 +698,4 @@
 
   </body>
 </html>
-
-
 

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1591193551299.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1B7243E0",
+    "lastKnownWriteTime" : 1591194663,
+    "last_content_update" : 1591194663496,
+    "path" : "C:/rProjects/Blog/content/post/2020-06-03-t-tests-regression-and-mean-value.Rmarkdown",
+    "project_path" : "content/post/2020-06-03-t-tests-regression-and-mean-value.Rmarkdown",
+    "properties" : {
+        "cursorPosition" : "41,251",
+        "scrollLine" : "23"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
