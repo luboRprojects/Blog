@@ -1,0 +1,42 @@
+---
+title: 'T-tests: Regression and mean value'
+author: ''
+date: '2020-07-08'
+slug: t-tests-regression-and-mean-value
+categories: []
+tags:
+  - r
+  - statistics
+image:
+  caption: ''
+  focal_point: ''
+---
+I have been asked by students about the difference between the "normal" t-test for mean value analysis and the "regression" t-test many times. So, is there any difference? Let's look the following example to get a practical intuition:
+
+We will use the mtcars dataset to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission. 
+```{r, message=FALSE}
+library(dplyr)
+data("mtcars")
+boxplot(mtcars$cyl ~ mtcars$am)
+
+mtcars %>% 
+  group_by(am) %>%
+  summarise(mpgAvg = mean(mpg))
+```
+
+Let's run the t-test for difference in means:
+
+```{r}
+t.test(mpg ~ am, var.equal = TRUE, data=mtcars)
+```
+
+And now check the regression outcome (there is no need to code am as factor has only 2 levels).
+
+```{r}
+lm(mpg ~ am, data=mtcars) %>%
+  summary
+```
+Both t-statics equal in absolute value to `r t.test(mpg ~ am, var.equal = TRUE, data=mtcars)$statistic %>% abs %>% round(3)`.
+
+What does this actually mean? The mean-value t-test tests whether difference between $\mu_{am=aut} = \mu_{am=man}$, which can be rewritten as $\mu_{am=aut} - \mu_{am=man} = 0$. The "regression" t-test tests whether the effect of having $am=aut = 0$.  
+

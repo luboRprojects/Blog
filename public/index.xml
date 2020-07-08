@@ -11,39 +11,30 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>T-tests: Regression and mean value </title>
+      <title>T-tests: Regression and mean value</title>
       <link>/post/t-tests-regression-and-mean-value/</link>
-      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/t-tests-regression-and-mean-value/</guid>
-      <description>&lt;p&gt;I have been asked by students about the difference between the &amp;ldquo;normal&amp;rdquo; t-test for mean value analysis and the &amp;ldquo;regression&amp;rdquo; t-test many times. So, is there any difference? Let&amp;rsquo;s look the following example to get a practical intuition:&lt;/p&gt;
+      <description>
 
+
+&lt;p&gt;I have been asked by students about the difference between the &amp;quot;normal&amp;quot; t-test for mean value analysis and the &amp;quot;regression&amp;quot; t-test many times. So, is there any difference? Let&#39;s look the following example to get a practical intuition:&lt;/p&gt;
 &lt;p&gt;We will use the mtcars dataset to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(dplyr)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
 data(&amp;quot;mtcars&amp;quot;)
-boxplot(mtcars$cyl ~ mtcars$am)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;/post/2020-06-03-t-tests-regression-and-mean-value_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mtcars %&amp;gt;% 
+boxplot(mtcars$cyl ~ mtcars$am)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-07-08-t-tests-regression-and-mean-value.en_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mtcars %&amp;gt;% 
   group_by(am) %&amp;gt;%
-  summarise(mpgAvg = mean(mpg))
-&lt;/code&gt;&lt;/pre&gt;
-
+  summarise(mpgAvg = mean(mpg))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 2
 ##      am mpgAvg
 ##   &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
 ## 1     0   17.1
-## 2     1   24.4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Let&amp;rsquo;s run the t-test for difference in means:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;t.test(mpg ~ am, var.equal = TRUE, data=mtcars)
-&lt;/code&gt;&lt;/pre&gt;
-
+## 2     1   24.4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&#39;s run the t-test for difference in means:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t.test(mpg ~ am, var.equal = TRUE, data=mtcars)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ##  Two Sample t-test
 ## 
@@ -54,15 +45,10 @@ boxplot(mtcars$cyl ~ mtcars$am)
 ##  -10.84837  -3.64151
 ## sample estimates:
 ## mean in group 0 mean in group 1 
-##        17.14737        24.39231
-&lt;/code&gt;&lt;/pre&gt;
-
+##        17.14737        24.39231&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And now check the regression outcome (there is no need to code am as factor has only 2 levels).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lm(mpg ~ am, data=mtcars) %&amp;gt;%
-  summary
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lm(mpg ~ am, data=mtcars) %&amp;gt;%
+  summary&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## Call:
 ## lm(formula = mpg ~ am, data = mtcars)
@@ -76,16 +62,13 @@ boxplot(mtcars$cyl ~ mtcars$am)
 ## (Intercept)   17.147      1.125  15.247 1.13e-15 ***
 ## am             7.245      1.764   4.106 0.000285 ***
 ## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
 ## 
 ## Residual standard error: 4.902 on 30 degrees of freedom
 ## Multiple R-squared:  0.3598, Adjusted R-squared:  0.3385 
-## F-statistic: 16.86 on 1 and 30 DF,  p-value: 0.000285
-&lt;/code&gt;&lt;/pre&gt;
-
+## F-statistic: 16.86 on 1 and 30 DF,  p-value: 0.000285&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Both t-statics equal in absolute value to 4.106.&lt;/p&gt;
-
-&lt;p&gt;What does this actually mean? The mean-value t-test tests whether difference between &lt;code&gt;\(\mu_{am=aut} = \mu_{am=man}\)&lt;/code&gt;, which can be rewritten as &lt;code&gt;\(\mu_{am=aut} - \mu_{am=man} = 0\)&lt;/code&gt;. The &amp;ldquo;regression&amp;rdquo; t-test tests whether the effect of having &lt;code&gt;\(am=aut = 0\)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;What does this actually mean? The mean-value t-test tests whether difference between &lt;span class=&#34;math inline&#34;&gt;\(\mu_{am=aut} = \mu_{am=man}\)&lt;/span&gt;, which can be rewritten as &lt;span class=&#34;math inline&#34;&gt;\(\mu_{am=aut} - \mu_{am=man} = 0\)&lt;/span&gt;. The &amp;quot;regression&amp;quot; t-test tests whether the effect of having &lt;span class=&#34;math inline&#34;&gt;\(am=aut = 0\)&lt;/span&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -187,16 +170,16 @@ p.value
 ts2.l1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.203
+0.269
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.099
+0.081
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-2.058
+3.303
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.042
+0.001
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -204,13 +187,13 @@ ts2.l1
 ts3.l1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.470
+0.438
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.100
+0.092
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-4.713
+4.783
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 0.000
@@ -221,16 +204,16 @@ ts3.l1
 const
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.006
+-0.090
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.065
+0.059
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.098
+-1.535
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.922
+0.128
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -242,7 +225,7 @@ const
 ##  Granger causality H0: ts2 do not Granger-cause ts3
 ## 
 ## data:  VAR object varFit1
-## F-Test = 4.2338, df1 = 1, df2 = 190, p-value = 0.04099&lt;/code&gt;&lt;/pre&gt;
+## F-Test = 10.91, df1 = 1, df2 = 190, p-value = 0.001143&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can reject the null and can claim there is an evidence for TS2 Granger-Causes TS3. This is exactly what we have expected.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;grViz(&amp;quot;
  digraph boxes_and_circles {

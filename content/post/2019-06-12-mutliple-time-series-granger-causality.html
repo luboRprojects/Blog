@@ -101,16 +101,16 @@ p.value
 ts2.l1
 </td>
 <td style="text-align:right;">
-0.203
+0.269
 </td>
 <td style="text-align:right;">
-0.099
+0.081
 </td>
 <td style="text-align:right;">
-2.058
+3.303
 </td>
 <td style="text-align:right;">
-0.042
+0.001
 </td>
 </tr>
 <tr>
@@ -118,13 +118,13 @@ ts2.l1
 ts3.l1
 </td>
 <td style="text-align:right;">
-0.470
+0.438
 </td>
 <td style="text-align:right;">
-0.100
+0.092
 </td>
 <td style="text-align:right;">
-4.713
+4.783
 </td>
 <td style="text-align:right;">
 0.000
@@ -135,16 +135,16 @@ ts3.l1
 const
 </td>
 <td style="text-align:right;">
-0.006
+-0.090
 </td>
 <td style="text-align:right;">
-0.065
+0.059
 </td>
 <td style="text-align:right;">
-0.098
+-1.535
 </td>
 <td style="text-align:right;">
-0.922
+0.128
 </td>
 </tr>
 </tbody>
@@ -156,7 +156,7 @@ const
 ##  Granger causality H0: ts2 do not Granger-cause ts3
 ## 
 ## data:  VAR object varFit1
-## F-Test = 4.2338, df1 = 1, df2 = 190, p-value = 0.04099</code></pre>
+## F-Test = 10.91, df1 = 1, df2 = 190, p-value = 0.001143</code></pre>
 <p>We can reject the null and can claim there is an evidence for TS2 Granger-Causes TS3. This is exactly what we have expected.</p>
 <pre class="r"><code>grViz(&quot;
  digraph boxes_and_circles {

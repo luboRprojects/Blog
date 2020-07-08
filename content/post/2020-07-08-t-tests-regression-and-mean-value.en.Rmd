@@ -1,7 +1,7 @@
 ---
-title: 'T-tests: Regression and mean value '
+title: 'T-tests: Regression and mean value'
 author: ''
-date: '2020-06-03'
+date: '2020-07-08'
 slug: t-tests-regression-and-mean-value
 categories: []
 tags:
@@ -11,7 +11,6 @@ image:
   caption: ''
   focal_point: ''
 ---
-
 I have been asked by students about the difference between the "normal" t-test for mean value analysis and the "regression" t-test many times. So, is there any difference? Let's look the following example to get a practical intuition:
 
 We will use the mtcars dataset to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission. 

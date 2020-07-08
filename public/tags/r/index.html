@@ -113,7 +113,7 @@
   <meta property="og:description" content="Lecturer"><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2020-06-03T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2020-07-08T00:00:00&#43;00:00">
   
 
   
@@ -256,12 +256,12 @@
   
   
   <div>
-    <h2><a href="/post/t-tests-regression-and-mean-value/">T-tests: Regression and mean value </a></h2>
+    <h2><a href="/post/t-tests-regression-and-mean-value/">T-tests: Regression and mean value</a></h2>
     <div class="article-style">
       
-      I have been asked by students about the difference between the &ldquo;normal&rdquo; t-test for mean value analysis and the &ldquo;regression&rdquo; t-test many times. So, is there any difference? Let&rsquo;s look the following example to get a practical intuition:
+      I have been asked by students about the difference between the &quot;normal&quot; t-test for mean value analysis and the &quot;regression&quot; t-test many times. So, is there any difference? Let's look the following example to get a practical intuition:
 We will use the mtcars dataset to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission.
-library(dplyr) data(&quot;mtcars&quot;) boxplot(mtcars$cyl ~ mtcars$am)  mtcars %&gt;% group_by(am) %&gt;% summarise(mpgAvg = mean(mpg))  ## # A tibble: 2 x 2 ## am mpgAvg ## &lt;dbl&gt; &lt;dbl&gt; ## 1 0 17.
+library(dplyr)data(&quot;mtcars&quot;)boxplot(mtcars$cyl ~ mtcars$am)mtcars %&gt;% group_by(am) %&gt;%summarise(mpgAvg = mean(mpg))## # A tibble: 2 x 2## am mpgAvg## &lt;dbl&gt; &lt;dbl&gt;## 1 0 17.
       
     </div>
   </div>
