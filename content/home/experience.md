@@ -21,10 +21,10 @@ date_format = "January 2006"
 
 [[experience]]
   title = "Asistant Professor"
-  company = "Tomas Baťa University"
+  company = "Tomas Bata University in Zlín"
   company_url = "https://fame.utb.cz/"
   location = "Czech Republic"
-  date_start = "2019-09-01"
+  date_start = "2018-09-01"
 
 
 [[experience]]
