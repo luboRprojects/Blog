@@ -31,6 +31,8 @@ date_format = "January 2006"
   * Vice-dean for PhD study
   * Lecturer of graduate courses Risk Management, Econometrics, Behavioral Economics and Research methodology
 
+  """
+  
 [[experience]]
   title = "Senior Analyst"
   company = "Baoviet Security"
