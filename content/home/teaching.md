@@ -8,7 +8,7 @@ date = 2019-08-19T00:00:00
 
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
 title = "Teaching"
-subtitle = "2019/2020"
+subtitle = ""
 
 # Order that this section will appear in.
 weight = 60
@@ -19,8 +19,8 @@ weight = 60
 Undergraduate courses:
 
 - Econometrics 
-- Ekonometrie
 - Risk Management
+- Behavioral economics
 
 PhD course:
 
