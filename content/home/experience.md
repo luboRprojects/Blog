@@ -25,7 +25,10 @@ date_format = "January 2006"
   company_url = "https://fame.utb.cz/"
   location = "Czech Republic"
   date_start = "2018-09-01"
-
+  Responsibilities include:
+  
+  * Vice-dean for PhD study
+  * Lecturer of graduate courses Risk Management, Econometrics, Behavioral Economics and Research methodology
 
 [[experience]]
   title = "Senior Analyst"
