@@ -59,7 +59,7 @@ date_format = "January 2006"
   
 [[experience]]
   title = "Asistant Professor"
-  company = "Tomas Baťa University"
+  company = "Tomas Bata University in Zlín"
   company_url = ""
   location = "Czech Republic"
   date_start = "2016-01-01"
