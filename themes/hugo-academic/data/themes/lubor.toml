@@ -6,7 +6,7 @@ light = true
 
 # Primary
 primary = "#34495e"
-primary_light = "#768fff"
+primary_light = "#b8167c"
 primary_dark = "#0039cb"
 
 # Menu
@@ -16,9 +16,8 @@ menu_title = "#B92D2D"
 menu_text = "rgb(255, 255, 255)"
 menu_text_active = "#34495e"
 
-
 # Home sections
-#home_section_odd = "rgb(255, 255, 255)"
-#home_section_even = "rgb(247, 247, 247)" 
-home_section_odd = "#34495e"
-home_section_even = "#34495e"
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)" 
+#home_section_odd = "#34495e"
+#home_section_even = "#34495e"
