@@ -1,22 +1,25 @@
 {
-    "collab_server" : "",
-    "contents" : "",
-    "created" : 1560432214119.000,
-    "dirty" : false,
-    "encoding" : "UTF-8",
-    "folds" : "",
-    "hash" : "1411977913",
-    "id" : "78640B93",
-    "lastKnownWriteTime" : 1591194996,
-    "last_content_update" : 1591194996484,
-    "path" : "C:/rProjects/Blog/content/post/2019-06-12-mutliple-time-series-granger-causality.Rmd",
-    "project_path" : "content/post/2019-06-12-mutliple-time-series-granger-causality.Rmd",
-    "properties" : {
-        "cursorPosition" : "8,11",
-        "scrollLine" : "0"
+    "id": "78640B93",
+    "path": "C:/rProjects/Blog/content/post/2019-06-12-mutliple-time-series-granger-causality.Rmd",
+    "project_path": "content/post/2019-06-12-mutliple-time-series-granger-causality.Rmd",
+    "type": "r_markdown",
+    "hash": "1411977913",
+    "contents": "",
+    "dirty": false,
+    "created": 1560432214119.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "cursorPosition": "8,11",
+        "scrollLine": "0",
+        "Source": "Source"
     },
-    "relative_order" : 2,
-    "source_on_save" : false,
-    "source_window" : "",
-    "type" : "r_markdown"
+    "folds": "",
+    "lastKnownWriteTime": 1591194996,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1591194996484,
+    "read_only": false,
+    "read_only_alternatives": []
 }

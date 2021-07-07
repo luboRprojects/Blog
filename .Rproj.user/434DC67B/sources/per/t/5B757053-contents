@@ -11,9 +11,9 @@ image:
   caption: ''
   focal_point: ''
 ---
-I have been asked by students about the difference between the "normal" t-test for mean value analysis and the "regression" t-test many times. So, is there any difference? Let's look the following example to get a practical intuition:
+I have been asked by students about the difference between the "normal" t-test evaluating differences in mean values and the "regression" t-test several times. So, is there any difference? Let's look the following example to get a practical intuition:
 
-We will use the mtcars dataset to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission. 
+We will use the mtcars data set to test whether cars with manual transmission have different fuel consumption than cars with automatic transmission. 
 ```{r, message=FALSE}
 library(dplyr)
 data("mtcars")
@@ -27,16 +27,16 @@ mtcars %>%
 Let's run the t-test for difference in means:
 
 ```{r}
-t.test(mpg ~ am, var.equal = TRUE, data=mtcars)
+t.test(am ~ mpg, var.equal = TRUE, data=mtcars)
 ```
 
-And now check the regression outcome (there is no need to code am as factor has only 2 levels).
+Let's check the regression outcome (there is no need to code am as factor has only 2 levels).
 
 ```{r}
 lm(mpg ~ am, data=mtcars) %>%
   summary
 ```
-Both t-statics equal in absolute value to `r t.test(mpg ~ am, var.equal = TRUE, data=mtcars)$statistic %>% abs %>% round(3)`.
+t-statics from both tests result are identical `r t.test(mpg ~ am, var.equal = TRUE, data=mtcars)$statistic %>% abs %>% round(3)`.
 
-What does this actually mean? The mean-value t-test tests whether difference between $\mu_{am=aut} = \mu_{am=man}$, which can be rewritten as $\mu_{am=aut} - \mu_{am=man} = 0$. The "regression" t-test tests whether the effect of having $am=aut = 0$.  
+The "normal" t-test tests whether there is any difference between mean values ($\mu$) of the $mpg$ variable.  $\mu_{am=aut}$ and  $\mu_{am=man}$. This corresponds to common settings of the null hypothesis: $\mu_{am=aut} - \mu_{am=man} = 0$. The "regression" t-test tests whether the effect of having $am=aut = 0$.  
 

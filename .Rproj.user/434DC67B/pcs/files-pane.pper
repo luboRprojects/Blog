@@ -1,9 +1,9 @@
 {
-    "path" : "C:/rProjects/Blog/content",
-    "sortOrder" : [
+    "path": "C:/rProjects/Blog/content",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "ascending": true,
+            "columnIndex": 2
         }
     ]
 }

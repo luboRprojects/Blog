@@ -1,22 +1,25 @@
 {
-    "collab_server" : "",
-    "contents" : "",
-    "created" : 1594201147823.000,
-    "dirty" : false,
-    "encoding" : "UTF-8",
-    "folds" : "",
-    "hash" : "3712758006",
-    "id" : "5B757053",
-    "lastKnownWriteTime" : 1594201152,
-    "last_content_update" : 1594201152268,
-    "path" : "C:/rProjects/Blog/content/post/2020-07-08-t-tests-regression-and-mean-value.en.Rmd",
-    "project_path" : "content/post/2020-07-08-t-tests-regression-and-mean-value.en.Rmd",
-    "properties" : {
-        "cursorPosition" : "42,0",
-        "scrollLine" : "24"
+    "id": "5B757053",
+    "path": "C:/rProjects/Blog/content/post/2020-07-08-t-tests-regression-and-mean-value.en.Rmd",
+    "project_path": "content/post/2020-07-08-t-tests-regression-and-mean-value.en.Rmd",
+    "type": "r_markdown",
+    "hash": "1730961690",
+    "contents": "",
+    "dirty": false,
+    "created": 1594201147823.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "cursorPosition": "40,0",
+        "scrollLine": "26",
+        "Source": "Source"
     },
-    "relative_order" : 4,
-    "source_on_save" : false,
-    "source_window" : "",
-    "type" : "r_markdown"
+    "folds": "",
+    "lastKnownWriteTime": 1625037706,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1625037706874,
+    "read_only": false,
+    "read_only_alternatives": []
 }
