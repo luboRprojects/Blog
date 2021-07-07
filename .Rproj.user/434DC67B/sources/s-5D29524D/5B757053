@@ -3,23 +3,26 @@
     "path": "C:/rProjects/Blog/content/post/2020-07-08-t-tests-regression-and-mean-value.en.Rmd",
     "project_path": "content/post/2020-07-08-t-tests-regression-and-mean-value.en.Rmd",
     "type": "r_markdown",
-    "hash": "1730961690",
+    "hash": "720448469",
     "contents": "",
     "dirty": false,
     "created": 1594201147823.0,
     "source_on_save": false,
     "relative_order": 4,
     "properties": {
-        "cursorPosition": "40,0",
-        "scrollLine": "26",
-        "Source": "Source"
+        "cursorPosition": "29,15",
+        "scrollLine": "14",
+        "Source": "Source",
+        "docOutlineVisible": "0",
+        "rmdVisualMode": "false",
+        "rmdVisualModeLocation": "2:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1625037706,
+    "lastKnownWriteTime": 1625656910,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1625037706874,
+    "last_content_update": 1625656910898,
     "read_only": false,
     "read_only_alternatives": []
 }

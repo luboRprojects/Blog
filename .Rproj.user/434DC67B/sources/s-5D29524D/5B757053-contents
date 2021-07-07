@@ -5,8 +5,8 @@ date: '2020-07-08'
 slug: t-tests-regression-and-mean-value
 categories: []
 tags:
-  - r
-  - statistics
+- r
+- statistics
 image:
   caption: ''
   focal_point: ''
@@ -27,7 +27,7 @@ mtcars %>%
 Let's run the t-test for difference in means:
 
 ```{r}
-t.test(am ~ mpg, var.equal = TRUE, data=mtcars)
+t.test(mpg ~ am, var.equal = TRUE, data=mtcars)
 ```
 
 Let's check the regression outcome (there is no need to code am as factor has only 2 levels).
