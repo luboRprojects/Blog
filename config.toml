@@ -9,7 +9,7 @@
 baseurl = "https://lubor.netlify.com/"
 
 # Title of your site
-title = ""
+title = "Home -- Lubor Homolka"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -68,12 +68,12 @@ enableGitInfo = false
   address = "Faculty of Management and Economics, office 208, Mostní 5139, 760 01 Zlín"
   office_hours = """
   Wednesday 09:00 to 10:00\\
-  Otherwise email to book an appointment
+  Please email me to book an appointment
   """
   #phone = "888 888 88 88"
   #skype = "echo123"
   #telegram = ""
-  keybase = ""  # Your keybase.io username.
+  #keybase = ""  # Your keybase.io username.
 
   # Enter an optional link for booking appointments (e.g. calendly.com).
   appointment_url = ""
